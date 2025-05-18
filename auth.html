@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi-ninja Авторизація</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo-section">
+        <a href="index.html">
+            <img src="1.png" alt="Sushi-ninja Logo" class="logo-img">
+        </a>
+        <span class="logo-text">Sushi-ninja</span>
+    </div>
+    <nav class="nav-menu" id="mainNav">
+        <a href="menu.html">Меню</a>
+        <a href="order.html">Замовлення</a>
+        <a href="delivery.html">Доставка</a>
+    </nav>
+
+    <div class="header-actions">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <a href="auth.html">
+        <div class="user-icon">
+            <img src="5.png" alt="User" />
+
+        </div>
+        </a>
+    </div>
+</header>
+<main>
+    <form class="login-form" autocomplete="off" onsubmit="return false;">
+        <h2>Ласкаво просимо</h2>
+        <label for="email">Електронна адреса:</label>
+        <input type="email" id="email" name="email" placeholder="email@example.com" autocomplete="username">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password">
+        <div class="login-links">
+            <a href="#">Забули пароль?</a>
+            <a href="#">Реєстрація</a>
+        </div>
+        <button type="submit" class="login-btn">Авторизація</button>
+    </form>
+</main>
+<script>
+
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+    });
+</script>
+</body>
+</html>

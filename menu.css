@@ -1,0 +1,181 @@
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 32px;
+    width: 95vw;
+    max-width: 980px;
+    margin: 24px auto 0 auto;
+}
+
+.sushi-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 8px 16px 8px;
+    min-height: 240px;
+    min-width: 200px;
+    max-width: 220px;
+    position: relative;
+}
+
+
+.sushi-img {
+    width: 170px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background: #eee;
+}
+
+.sushi-name {
+    color: #191919;
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.sushi-pricing {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #232323;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.new-price {
+    color: #c00;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.order-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: #c00;
+    color: #fff;
+    border: none;
+    border-radius: 0 0 18px 18px;
+    padding: 8px 24px;
+    font-size: 1.1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.order-btn:hover {
+    background: #8b3535;
+}
+
+
+
+@media (max-width: 900px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 12px;
+        width: 100vw;
+        max-width: 100vw;
+        padding: 0 8px;
+    }
+    .sushi-card, .sushi-card.empty {
+        min-width: 150px;
+        max-width: 220px;
+        min-height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .sushi-img {
+        width: 120px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 16px 0;
+        width: 100vw;
+        padding: 0 4px;
+    }
+    .sushi-card, .sushi-card.empty {
+        min-width: 90vw;
+        max-width: 99vw;
+        min-height: 180px;
+    }
+    .sushi-img {
+        width: 95vw;
+        max-width: 320px;
+        height: 65vw;
+        max-height: 150px;
+    }
+}
+
+
+.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    .header {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        height: auto;
+        padding: 0 4px;
+    }
+    .logo-section {
+        margin-bottom: 0;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        background: #8b3535;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        z-index: 10;
+        padding: 12px 24px;
+        border-radius: 0 0 14px 14px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+    }
+    .nav-menu.open {
+        display: flex;
+    }
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        background: none;
+        border: none;
+        font-size: 2.2rem;
+        color: #191919;
+        padding: 0 6px;
+        margin-left: auto;
+        margin-right: 6px;
+        height: 64px;
+        cursor: pointer;
+    }
+    .header-actions {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        gap: 8px;
+    }
+    .logo-section {
+        flex: 1 1 auto;
+    }
+}

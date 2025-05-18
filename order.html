@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi-ninja Замовлення</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo-section">
+        <a href="index.html">
+            <img src="1.png" alt="Sushi-ninja Logo" class="logo-img">
+        </a>
+        <span class="logo-text">Sushi-ninja</span>
+    </div>
+    <nav class="nav-menu" id="mainNav">
+        <a href="menu.html">Меню</a>
+        <a href="order.html" class="active">Замовлення</a>
+        <a href="index.html">Доставка</a>
+
+    </nav>
+
+    <div class="header-actions">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <a href="auth.html">
+        <div class="user-icon">
+            <img src="5.png" alt="User" />
+        </div>
+        </a>
+    </div>
+</header>
+<main>
+    <div class="order-wrapper">
+        <div class="order-list">
+
+            <div class="order-item">
+                <img src="21.webp" alt="Філадельфія класична" class="order-img">
+                <div class="order-details">
+                    <div class="order-name">Філадельфія класична 1шт.</div>
+                    <div class="order-price price-paid">600 грн</div>
+                </div>
+                <button class="order-remove" aria-label="Видалити">&#10005;</button>
+            </div>
+
+            <div class="order-item">
+                <img src="31.jpg" alt="Васабі" class="order-img">
+                <div class="order-details">
+                    <div class="order-name">Васабі 1шт.</div>
+                    <div class="order-price price-free">Безкоштовно</div>
+                </div>
+                <button class="order-remove" aria-label="Видалити">&#10005;</button>
+            </div>
+
+            <div class="order-item">
+                <img src="32.jpg" alt="Імбир" class="order-img">
+                <div class="order-details">
+                    <div class="order-name">Імбир</div>
+                    <div class="order-price price-free">Безкоштовно</div>
+                </div>
+                <button class="order-remove" aria-label="Видалити">&#10005;</button>
+            </div>
+        </div>
+        <div class="order-summary">
+            <div>Сума замовлення: <span class="summary-value">600 грн</span></div>
+            <div>Вартість доставки: <span class="summary-value">50 грн</span></div>
+            <div class="summary-total">Всього до сплати: <span class="summary-value">650 грн</span></div>
+            <button class="summary-btn">Оформити замовлення</button>
+        </div>
+    </div>
+</main>
+<script>
+
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi-ninja Доставка</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="delivery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo-section">
+        <a href="index.html">
+            <img src="1.png" alt="Sushi-ninja Logo" class="logo-img">
+        </a>
+        <span class="logo-text">Sushi-ninja</span>
+    </div>
+    <nav class="nav-menu" id="mainNav">
+        <a href="menu.html">Меню</a>
+        <a href="order.html">Замовлення</a>
+        <a href="delivery.html" class="active">Доставка</a>
+    </nav>
+
+    <div class="header-actions">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <a href="auth.html">
+        <div class="user-icon">
+            <img src="5.png" alt="User" />
+        </div>
+        </a>
+    </div>
+</header>
+<main>
+    <div class="delivery-container">
+        <div class="delivery-left">
+            <div class="section-title">Наше місцезнаходження:</div>
+            <div class="map">
+                <iframe
+                 src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1523.1667295211118!2d22.289453128836833!3d48.634478630703896!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1747587471800!5m2!1suk!2sua"
+                        width="400" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contacts">
+                <div class="contacts-title">Наші контакти</div>
+                <div>Номер телефону (для зворотного зв'язку):<br>
+                    <a href="tel:+3805082111000" class="phone-link">+3805082111000</a>
+                </div>
+                <div>Електронна адреса:
+                    <a href="mailto:sushi_ninja@pdiddy.com" class="mail-link">sushi_ninja@pdiddy.com</a>
+                </div>
+                <div class="social-list">
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <form class="delivery-form" autocomplete="off">
+            <label class="form-label" for="address">Вкажіть адресу доставки:</label>
+            <input type="text" id="address" name="address" class="form-input">
+            <div class="form-label form-label-personal">Персональні дані:</div>
+            <input type="text" name="fullname" placeholder="Ім'я Фамілія" class="form-input">
+            <input type="tel" name="phone" placeholder="Номер телефону" class="form-input">
+        </form>
+    </div>
+</main>
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+    });
+</script>
+</body>
+</html>
