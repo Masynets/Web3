@@ -1,8 +1,22 @@
+
+:root {
+    --background-color: #232323;
+    --text-color: #ffffff;
+}
+
+html.light-theme {
+    --background-color: #ffffff;
+    --text-color: #232323;
+}
+
+
+
 body {
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
-    background: #232323;
-    color: #fff;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .header {
@@ -49,7 +63,13 @@ body {
     transition: color 0.2s;
 }
 
+.nav-toggle {
+    display: none;
+}
 
+.menu-toggle-input {
+    display: none;
+}
 
 .header-actions {
     display: flex;
@@ -122,17 +142,20 @@ input:checked + .slider:before {
 }
 
 main {
-    margin-top: 48px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
 }
 
 .main-title {
+
     font-size: 2.6rem;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 32px;
+    margin-top: 20px;
+
 }
 
 .description-box {
@@ -144,3 +167,120 @@ main {
     font-size: 1.2rem;
     text-align: center;
 }
+
+.welcome-button{
+    margin-top: 50px;
+    background: #c00;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background 0.2s;
+
+
+}
+
+.welcome-button:hover {
+    background: #8b3535;
+}
+
+@media (max-width: 900px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+    .description-box {
+        padding: 20px 20px;
+    }
+    .welcome-button {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        flex-wrap: wrap;
+        align-items: center;
+        height: auto;
+        padding: 0 4px;
+    }
+    .logo-section {
+        flex: 1 1 auto;
+        margin-bottom: 0;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        background: #8b3535;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        z-index: 10;
+        padding: 12px 24px;
+        border-radius: 0 0 14px 14px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+        width: 180px;
+    }
+
+    .menu-toggle-input:checked ~ .nav-menu {
+        display: flex;
+    }
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        background: none;
+        border: none;
+        font-size: 2.2rem;
+        color: #191919;
+        padding: 0 6px;
+        margin-left: auto;
+        margin-right: 6px;
+        height: 64px;
+        cursor: pointer;
+    }
+    .header-actions {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        gap: 8px;
+        z-index: 11;
+    }
+    .main-title {
+        font-size: 1.8rem;
+    }
+    .description-box {
+        padding: 16px;
+        font-size: 0.95rem;
+    }
+    .welcome-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .logo-img {
+        width: 50px;
+        height: 48px;
+        margin-left: 0;
+    }
+    .logo-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .description-box {
+        max-width: 95%;
+        padding: 16px;
+        font-size: 0.9rem;
+    }
+    .main-title {
+        font-size: 1.8rem;
+    }
+    .welcome-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+

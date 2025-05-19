@@ -13,6 +13,10 @@
         <img src="1.png" alt="Sushi-ninja Logo" class="logo-img">
         <span class="logo-text">Sushi-ninja</span>
     </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        &#9776; </button>
+
     <nav class="nav-menu">
         <a href="menu.html">Меню</a>
         <a href="order.html">Замовлення</a>
@@ -36,6 +40,19 @@
     <div class="description-box">
         Ласкаво просимо до світу вишуканої японської кухні, за допомогою нашого сервісу ви зможете насолодитися гастрономічними шедеврами! Наші досвідчені шеф-кухарі, які навчалися у Японії, ретельно готують кожну страву, використовуючи виключно свіжі та якісні інгредієнти – від ідеально звареного рису для суші до найсвіжішої риби, що поставляється щодня.
     </div>
+
+    <div>
+    <a class="welcome-button" href="menu.html">Перейти до меню</a>
+     </div>
+
 </main>
+<script>
+    const toggle = document.getElementById('theme-toggle');
+
+    toggle.addEventListener('change', () => {
+        document.documentElement.classList.toggle('light-theme', toggle.checked);
+    });
+</script>
+
 </body>
 </html>
